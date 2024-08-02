@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: sans-serif;
+        }
+        .container{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        /* nav */
+        .color-blue{
+            color: dodgerblue;
+        }
+        .nav{
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+        }
+        .nav-inner{
+            display: flex;
+            justify-content: space-between;
+        }
+        ul li{
+            list-style: none;
+        }
+        .logo{
+            font-size: 30px;
+            padding:  16px 0;
+        }
+        .menu{
+            display: flex;
+        }
+        .menu li{
+            display: flex;
+            align-items: stretch;
+        }
+        .menu li a{
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            transition: 0.3s;
+        }
+        .menu li .active,
+        .menu li a:hover{
+            background-color: rgb(255, 255, 255, 0.15);
+            color: dodgerblue;
+        }
+        /* about hero content */
+        .about-hero-inner{
+            display: flex;
+            justify-content: space-between;
+            padding: 40px 0;
+        }
+        .about-hero{
+            background-color: lightgray;
+        }
+        .left-section{
+            width: 50%;
+        }
+        .left-section p{
+            margin-top: 30px;
+            line-height: 20px;
+        }
+        .right-section{
+            width: 50%;
+        }
+        .right-section img{
+            width: 340px;
+            border-radius: 50%;
+            margin: 0px auto;
+            display: block;
+        }
+        /* footer */
+        .customers{
+            width: 100%;
+            background-image: url(./images/our-gamers.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            padding: 150px 0;
+        }
+        .customers-inner h2{
+            text-align: center;
+            font-size: 28px;
+            text-transform: uppercase;
+            color: white;
+        }
+        .customer-item{
+            background-color: rgba(30, 143, 255, 0.822);
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            margin-top: 70px;
+            border-radius: 8px;
+        }
+        .customer-item img{
+            width: 10%;
+            border-radius: 50%;
+            margin-right: 30px;
+        }
+        .customer-item p{
+            color: white;
+            font-size: 18px;
+            line-height: 24px;
+        }
+        .footer{
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            background-color: #333;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- navigation -->
+    <div class="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <!-- left section or logo -->
+                <div class="logo">GAMESTATION</div>
+                <!-- right section or menu -->
+                    <ul class="menu">
+                        <li>
+                            <a href="./tamrin.html">HOME</a>
+                        </li>
+                        <li>
+                            <a href="./about.html" class="active">ABOUT</a>
+                        </li>
+                        <li>
+                            <a href="./contact.html">CONTACT</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+    <!-- about hero content -->
+    <div class="about-hero">
+        <div class="container">
+            <div class="about-hero-inner">
+                <div class="left-section">
+                    <h2>ABOUT <span class="color-blue">GAMESTATION</span> </h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam deleniti vel, cumque vero eius ut. Odit reprehenderit impedit, doloremque eaque nisi beatae est? Quam atque excepturi quasi quae repellat nesciunt.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni deserunt ipsa illum sit repudiandae itaque. Fugit excepturi vero nam cumque!
+                    </p>
+                </div>
+                <div class="right-section">
+                    <img src="./images/photo-2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- customers -->
+    <div class="customers">
+        <div class="container">
+            <div class="customers-inner">
+                <h2>What our customers says</h2>
+                <div class="customer-item">
+                    <img src="./images/person-1.jpg" alt="">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut voluptas esse alias odit nulla laborum voluptatum, ea iure nostrum totam commodi accusantium ad, quae eaque velit natus veritatis ullam consequuntur.
+                    </p>
+                </div>
+                <div class="customer-item">
+                    <img src="./images/person-2.jpg" alt="">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut voluptas esse alias odit nulla laborum voluptatum, ea iure nostrum totam commodi accusantium ad, quae eaque velit natus veritatis ullam consequuntur.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">Copyright 2024</div>
+</body>
+</html>
