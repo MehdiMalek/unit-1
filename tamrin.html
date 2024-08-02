@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Station</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: sans-serif;
+        }
+        .container{
+            width: 900px;
+            margin: 0 auto;
+        }
+        /* nav */
+        .color-blue{
+            color: dodgerblue;
+        }
+        .nav{
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+        }
+        .nav-inner{
+            display: flex;
+            justify-content: space-between;
+        }
+        ul li{
+            list-style: none;
+        }
+        .logo{
+            font-size: 30px;
+            padding:  16px 0;
+        }
+        .menu{
+            display: flex;
+        }
+        .menu li{
+            display: flex;
+            align-items: stretch;
+        }
+        .menu li a{
+            text-decoration: none;
+            color: white;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            transition: 0.3s;
+        }
+        .menu li .active,
+        .menu li a:active{
+            background-color: rgb(255, 255, 255, 0.15);
+            color: dodgerblue;
+        }
+        .menu li a:hover{
+            background-color: rgb(255, 255, 255, 0.15);
+            color: dodgerblue;
+        }
+        .hero{
+            width: 100%;
+            background-image: url(./images/hero.jpg);
+            background-position: center top;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            padding: 250px 0;
+
+        }
+        .hero-content{
+            background-color: #333333cc;
+            padding: 16px;
+            border-radius: 12px;
+        }
+        .hero-content h1{
+            text-align: center;
+            color:white;
+        }
+        .hero-content p{
+            font-size: 18px;
+            line-height: 26px;
+            text-align: center;
+            margin: 20px 0;
+            color: white;
+            margin: 30px 0;
+        }
+        .hero-content a{
+            background-color: #333;
+            color: white;
+            text-decoration: none;
+            width: 200px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            border: 1px solid dodgerblue;
+            border-radius: 6px;
+        }
+        .hero-content a:hover{
+            background-color: dodgerblue;
+            border: 5px solid rgb(131, 122, 122);
+            border: 1px solid white;
+        }
+        /* history */
+        .history{
+            width: 100%;
+            display: flex;
+        }
+        .left-history{
+            width: 50%;
+            background-color: red;
+            background-image: url(./images/history.jpg);
+            background-size: cover;
+            background-position: center center;
+        }
+        .right-history{
+            width: 50%;
+            background-color: #333;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+        .right-history h2{
+            color: white;
+        }
+        .right-history p{
+            color: white;
+            margin: 20px 0;
+            text-align: center;
+            line-height: 20px;
+        }
+        .right-history a{
+            background-color: white;
+            text-decoration: none;
+            width: 150px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+        }
+        /* games */
+        .games{
+            padding: 50px 0;
+        }
+        .games-inner > h2{
+            text-align: center;
+            text-transform: uppercase;
+        }    
+        
+        .game-items{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .game-item h3{
+            width: 100%;
+            background-color: #333;
+            padding: 20px 32px;
+            color: white;
+            transition: 0.9s;
+
+        }
+        .game-item{
+            width: 32%;
+            height: 250px;
+            margin-top: 30px;
+            display: flex;
+            align-items: flex-end;
+        }
+        .game-item:hover h3{
+            background-color: dodgerblue;
+            letter-spacing: 6px;
+        }
+        .game-item1{
+            background-image: url(./images/game1.jpg);
+            background-position: center center;
+            background-size: cover;
+        }
+        .game-item2{
+            background-image: url(./images/game2.jpg);
+            background-position: center center;
+            background-size: cover;
+        }
+        .game-item3{
+            background-image: url(./images/game3.jpg);
+            background-position: center center;
+            background-size: cover;
+        }
+        .game-item4{
+            background-image: url(./images/game4.jpg);
+            background-position: center center;
+            background-size: cover;
+        }
+        .game-item5{
+            background-image: url(./images/game5.jpg);
+            background-position: center center;
+            background-size: cover;
+        }
+        .game-item6{
+            background-image: url(./images/game6.jpg);
+            background-position: center center;
+            background-size: cover;
+        }
+        /* consoles */
+        .consoles{
+            width: 100%;
+            background-color: green;
+            display: flex;
+        }
+        .console{
+            width: 33.3333%;
+            text-align: center;
+            padding: 30px;
+            background-color: lightgray;
+        }
+        .console img{
+            width: 60px;
+            margin-bottom: 10px;
+        }
+        .console h2{
+            margin: 16px 0;
+        }
+        .mid-console{
+            background-color: dodgerblue;
+            color: white;
+        }
+        /* footer */
+        .footer{
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- navigation -->
+    <div class="nav">
+        <div class="container">
+            <div class="nav-inner">
+                <!-- left section or logo -->
+                <div class="logo">GAMESTATION</div>
+                <!-- right section or menu -->
+                    <ul class="menu">
+                        <li>
+                            <a href="" class="active">HOME</a>
+                        </li>
+                        <li>
+                            <a href="./about.html">ABOUT</a>
+                        </li>
+                        <li>
+                            <a href="./contact.html">CONTACT</a>
+                        </li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+    <!-- hero section -->
+    <div class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1><span class="color-blue">Enjoy</span> Your Game</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, <span class="color-blue">quas voluptatibus tempora quam quia </span>beatae odit sequi mollitia labore ea quasi nam exercitationem aliquid nobis libero, quae magnam perspiciatis dignissimos!
+                </p>
+                <a href="">About Gamestation</a>
+            </div>
+        </div>
+    </div>
+    <!-- history -->
+    <div class="history">
+        <!-- left history -->
+        <div class="left-history"></div>
+        <!-- right history -->
+        <div class="right-history">
+            <h2><span class="color-blue"> The history of </span>game station</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque nostrum porro, dicta non culpa necessitatibus. Placeat architecto animi itaque, odio ut repellat nobis maxime asperiores obcaecati sit nihil? Blanditiis, sint.
+            </p>
+            <a href="">Read more</a>
+        </div>
+    </div>
+    <!-- games -->
+    <div class="games">
+        <div class="container">
+            <div class="games-inner">
+                <h2>this is our games</h2>
+                <ul class="game-items">
+                    <li class="game-item game-item1">
+                        <h3>GAME 1</h3>
+                    </li>
+                    <li class="game-item game-item2">
+                        <h3>GAME 2</h3>
+                    </li>
+                    <li class="game-item game-item3">
+                        <h3>GAME 3</h3>
+
+                    </li>
+                    <li class="game-item game-item4">
+                        <h3>GAME 4</h3>
+
+                    </li>
+                    <li class="game-item game-item5">
+                        <h3>GAME 5</h3>
+
+                    </li>
+                    <li class="game-item game-item6">
+                        <h3>GAME 6</h3>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- consoles -->
+    <div class="consoles">
+        <div class="console">
+            <img src="./images/playstation-icon.svg" alt="playstation">
+            <h2>PLAYSTATION</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="console mid-console">
+            <img src="./images/xbox-icon.svg" alt="xbox">
+            <h2>XBOX</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="console">
+            <img src="./images/steam-icon.svg" alt="steam">
+            <h2>NINTENDO</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+    </div>
+    <div class="footer">Copyright 2024</div>
+</body>
+</html>
